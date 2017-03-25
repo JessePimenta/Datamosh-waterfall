@@ -65,7 +65,7 @@ ct.endShape();
    function onMouseMove(e){
 
     //  ct.num=(40) * 2;
-     ct.drawMe(0,0,ct.w,ct.h,0,-3,ct.w,ct.h) / 2;
+     ct.drawMe(100,0,ct.w,ct.h,0,-3,ct.w,ct.h) / 2;
     //  ct.clr()
      ct.lineTo(ct.h,ct.w);
       ct.glitch(10);
