@@ -6,8 +6,8 @@
         ct.init(canvas, getAudioContext());
         ct.setupFunc = init;
         ct.drawFunc = draw;
-        ct.beatFunc = beat;
-        ct.dspFunc = dsp;
+        // ct.beatFunc = beat;
+        // ct.dspFunc = dsp;
         ct.mouseMove = onMouseMove;
         ct.mouseDown = onMouseDown;
         ct.mouseUp = onMouseUp;
@@ -16,7 +16,7 @@
         requestAnimationFrame(update);
 
         function init() {
-            ct.sz(1720, 1280);
+            ct.sz(1220, 1280);
             ct.bg(0)
 
 
@@ -27,8 +27,8 @@
             // ct.sc=((ct.noise(ct.c*0.01,0)+5)/8);
 
             ct.drawMe(0, 0, ct.w, ct.h, 5, -3, ct.w, ct.h);
-            ct.hh = (ct.h / 3);
-            ct.ww = (ct.w / 3);
+            ct.hh = (ct.h /3);
+            ct.ww = (ct.w /3);
             ct.num = (300);
             ct.cw = (ct.w / (ct.num - 1));
             ct.col(ct.c * 0.101 * 2 * 227, 50, (ct.cos(ct.c * 0.111) * 2) * 227);
@@ -62,23 +62,23 @@
 
         }
 
-        function beat() {
-
-        }
-
-        function dsp() {
-
-        }
+        // function beat() {
+        //
+        // }
+        //
+        // function dsp() {
+        //
+        // }
 
         function onMouseMove(e) {
 
             //  ct.num=(40) * 2;
             // ct.drawMe(0, 0, ct.w, ct.h, 0, -3, ct.w, ct.h) / 2;
-            ct.drawMe(0, 0, ct.w, ct.h, 0, -3, ct.ww, ct.hh) / 2; // utter meltdown datafuck
+            ct.drawMe(0, 0, ct.hh, ct.h, 0, -3, ct.ww, ct.hh) / 2; // utter meltdown datafuck
 
             //  ct.clr()
             ct.lineTo(ct.hh, ct.ww);
-            ct.glitch(10);
+            ct.glitch();
             ct.crash(1);
             ct.lineTo(ct.x, ct.y + ct.h - ct.hh);
             for (var i = 0; i < num; i++) {
@@ -117,9 +117,8 @@
         function onResize() {
             ct.bg(0)
 
-            ct.sz(550, 620);
+            ct.sz(750, 620);
 
         }
     };
->>>>>>> 13fdbc07b80a4fca3188f46f7120f4106b245da8
 })();
